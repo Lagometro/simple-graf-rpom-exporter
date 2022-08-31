@@ -6,7 +6,6 @@ services:
         image: 'prom/blackbox-exporter:latest'
         ports:
             - '9115:9115'
-
     prometheus:
         container_name: prometheus
         ports:
@@ -14,7 +13,6 @@ services:
         volumes:
             - './prometheus.yml:/etc/prometheus/prometheus.yml'
         image: prom/prometheus
-
     grafana:
         container_name: grafana
         ports:
